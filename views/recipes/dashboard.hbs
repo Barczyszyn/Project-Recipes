@@ -1,0 +1,42 @@
+<div id="dashboard">
+    <div id="dashboard-container">
+
+        <h1 id="dashboard-container-left" class="dashboard-container-title-h1"><span>Dashboard</span></h1>
+        <div id="dashboard-container-buttons">
+            <button type="button" class="btn" onkeydown="return false" onclick="location.href='/recipes/add'">Cadastrar
+                Receita</button>
+        </div>
+    </div>
+
+    <div id="dashboard-container">
+        <h3 id="dashboard-container-left" class="dashboard-container-title-h3"><span>Suas Receitas</span></h3>
+    </div>
+
+    <div id="dashboard-container">
+        <ul>
+            {{#each recipes}}
+            <div class="list">
+                <li>
+                    <label class="label"><span>{{this.title}}</span></label>
+                </li>
+                <li>
+                    <label class="label">Descrição da Receita: <span>{{this.description}}</span></label>
+                </li>
+                <li>
+                    <label class="label">Tempo da Receita: <span>{{this.time}}</span></label>
+                </li>
+                <div class="actions">
+                    <a href="/recipes/update/{{this.id}}" class="btn">Editar</a>
+                    <form action="/recipes/remove" method="POST">
+                        <input type="hidden" name="id" value="{{this.id}}">
+                        <input type="submit" value="Excluir" class="btn">
+                    </form>
+                </div>
+            </div>
+            {{/each}}
+        </ul>
+        {{#if emptyRecipes}}
+        <label>Ainda não há nenhuma receita sua, comece a criar <a href="/recipes/add">por aqui!</a></label>
+        {{/if}}
+    </div>
+</div>

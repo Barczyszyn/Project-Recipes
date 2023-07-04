@@ -1,0 +1,33 @@
+<form action="/login" method="POST">
+    <div id="form-control">
+        <h1><span>Entrar</span></h1>
+
+        <div id="insert-control">
+            <div id="input-form-control">
+                <label for="email" class="form-label">E-mail:</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Digite o seu e-mail"
+                    size="50" maxlength="50" required autofocus>
+            </div>
+            <div id="input-form-control">
+                <label for="password" class="form-label">Senha:</label>
+                <input type="password" name="password" id="psw" class="form-control" placeholder="Digite a sua senha"
+                    size="25" maxlength="25" autocomplete="off" onkeydown="capsLock()" required>
+                <div id="messageCapsLock" class="msgCapsLock"></div>
+            </div>
+        </div>
+
+        <div id="insert-control">
+            <div id="input-form-control">
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="checkPassword" onclick="checkboxPassword()">
+                    <label class="form-check-label" for="checkPassword"><span>Exibir Senha</span></label>
+                </div>
+            </div>
+        </div>
+
+        <div id="insert-control-buttons">
+            <input type="submit" value="Entrar">
+        </div>
+        <p><span>Não possui uma conta?</span> <a href="/register">Clique aqui!</a></p>
+    </div>
+</form>

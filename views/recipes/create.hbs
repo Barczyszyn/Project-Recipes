@@ -1,0 +1,31 @@
+<form action="/recipes/add" method="POST">
+    <div id="form-control">
+        <h1>Cadastrando uma <span>Receita</span></h1>
+
+        <div id="insert-control">
+            <div id="input-form-control">
+                <label for="title" class="form-label">Nome:</label>
+                <input type="text" name="title" id="title" class="form-control" placeholder="Digite o nome da receita" size="100"
+                    maxlength="100" autocomplete="off" required autofocus>
+            </div>
+            <div id="input-form-control">
+                <label for="description" class="form-label">Descrição:</label>
+                <input type="text" name="description" id="description" class="form-control" placeholder="Digite a descrição da receita" size="100"
+                    maxlength="100" autocomplete="off" required>
+            </div>
+            <div id="input-form-control">
+                <label for="time" class="form-label">Tempo:</label>
+                <input type="text" name="time" id="time" class="form-control" placeholder="Digite o tempo da receita" autocomplete="off" required>
+            </div>
+        </div>
+
+        <div id="insert-control-buttons">
+            <button type="submit" class="btn">Enviar</button>
+            <button type="reset" class="btn" onclick="window.location.reload()">Limpar</button>
+        </div>
+
+         <div id="insert-control-buttons">
+            <button type="button" class="btn" onkeydown="return false" onclick="history.back()">Voltar</button>
+        </div>
+    </div>
+</form>

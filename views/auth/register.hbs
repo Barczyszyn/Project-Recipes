@@ -1,0 +1,60 @@
+<form action="/register" method="POST">
+    <div id="form-control">
+        <h1><span>Registrar</span></h1>
+
+        <div id="insert-control">
+            <div id="input-form-control">
+                <label for="name" class="form-label">Nome:</label>
+                <input type="text" name="name" id="name" class="form-control" placeholder="Digite o seu nome" size="100"
+                    maxlength="100" autocomplete="off" required autofocus>
+            </div>
+            <div id="input-form-control">
+                <label for="email" class="form-label">E-mail:</label>
+                <input type="email" name="email" id="email" class="form-control" placeholder="Digite o seu e-mail"
+                    size="50" maxlength="50" required>
+            </div>
+        </div>
+
+        <div id="insert-control">
+            <div id="input-form-control">
+                <label for="password" class="form-label">Senha:</label>
+                <input type="password" name="password" id="psw" class="form-control" placeholder="Digite a sua senha"
+                    size="25" maxlength="25" autocomplete="off" onkeydown="capsLock()"
+                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[$&+,:;=?@#|'<>.^*()%!-]).{8,}"
+                    title="A senha deve conter pelo menos uma letra minúscula e uma letra maiúscula, um número, um caractere especial e no mínimo 8 ou mais caracteres"
+                    required>
+                <div id="messageCapsLock" class="msgCapsLock"></div>
+                <div class="req-psw" id="req-psw">
+                    <h4>A senha deve seguir os seguintes padrões:</h4>
+                    <p id="letter" class="invalid">No mínimo <span>uma letra minúscula</span></p>
+                    <p id="capital" class="invalid">No mínimo <span>uma letra maiúscula</span></p>
+                    <p id="number" class="invalid">No mínimo <span>um número</span></p>
+                    <p id="special" class="invalid">No mínimo <span>um caractere especial</span></p>
+                    <p id="length" class="invalid">No mínimo <span>8 caracteres</span></p>
+                </div>
+            </div>
+            <div id="input-form-control">
+                <label for="confirmpassword" class="form-label">Confirme a senha:</label>
+                <input type="password" name="confirmpassword" id="pswConf" class="form-control"
+                    placeholder="Digite novamente a sua senha" size="25" maxlength="25" autocomplete="off"
+                    onkeydown="capsLockConf()">
+                <div id="messageCapsLockConf" class="msgCapsLock"></div>
+                <p id="pswOk">A senha não confere!</p>
+            </div>
+        </div>
+
+        <div id="insert-control">
+            <div id="input-form-control">
+                <div class="form-check form-switch">
+                    <input type="checkbox" class="form-check-input" id="checkPassword" onclick="checkboxPassword()">
+                    <label class="form-check-label" for="checkPassword"><span>Exibir Senha</span></label>
+                </div>
+            </div>
+        </div>
+
+        <div id="insert-control-buttons">
+            <input type="submit" value="Registrar">
+        </div>
+        <p><span>Já possui uma conta?</span> <a href="/login">Clique aqui!</a></p>
+    </div>
+</form>

@@ -1,0 +1,1051 @@
+:root {
+    --cor00: #444444;
+    --cor01: #FFFFFF;
+    --cor02: #00CE8D;
+    --cor03: #A0A0A0;
+    --cor04: #850000;
+    --cor05: #ffcccc;
+    --cor06: #ffb8b8;
+    --cor07: #008500;
+    --cor08: #cafcca;
+    --cor09: #b9ffb9;
+    --cor10: #004085;
+    --cor11: #CCE5FF;
+    --cor12: #B8DAFF;
+    --cor13: #838500;
+    --cor14: #feffcd;
+    --cor15: #feffb9;
+    --cor16: #dddada;
+}
+
+body {
+    background-color: var(--cor00) !important;
+    color: var(--cor01) !important;
+}
+
+.custom-background {
+    background-image: url('../img/background2.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+footer {
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid var(--cor02)
+}
+
+footer span {
+    font-weight: bold;
+    color: var(--cor02)
+}
+
+#notFound * {
+    font: bold 1.5rem Verdana, Arial, Helvetica;
+}
+
+#notFound img {
+    filter: invert(1);
+}
+
+#notFound .container {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+#notFound a:link {
+    color: white;
+    text-decoration: underline;
+}
+
+#notFound a:visited {
+    color: white;
+    text-decoration: underline;
+}
+
+#notFound a:hover {
+    color: var(--cor02);
+    text-decoration: underline;
+}
+
+#notFound a:active {
+    color: white;
+    text-decoration: underline;
+}
+
+@media screen and (min-width: 1300px) {
+    * {
+        font-family: Arial, Helvetica, Verdana;
+        margin: 0 auto;
+        padding: 0 auto;
+        box-sizing: border-box;
+    }
+
+    main {
+        min-height: 75vh;
+    }    
+
+    .swal-overlay {
+        background-color: rgba(161, 40, 40, 0.45);
+    }
+
+    .messageOk {
+        font-size: 1.1rem;
+        padding: 1rem;
+        color: var(--cor07);
+        background-color: var(--cor08);
+        border: 1px solid var(--cor09);
+        border-radius: 5px;
+        text-align: center;
+        max-width: 60%;
+    }
+
+    .messageErr {
+        font-size: 1.1rem;
+        padding: 1rem;
+        color: var(--cor04);
+        background-color: var(--cor05);
+        border: 1px solid var(--cor06);
+        border-radius: 5px;
+        text-align: center;
+        max-width: 60%;
+    }
+
+    .messageLog {
+        font-size: 1.1rem;
+        padding: 1rem;
+        color: var(--cor13);
+        background-color: var(--cor14);
+        border: 1px solid var(--cor15);
+        border-radius: 5px;
+        text-align: center;
+        max-width: 60%;
+    }
+
+    .messageDef {
+        font-size: 1.1rem;
+        padding: 1rem;
+        color: var(--cor10);
+        background-color: var(--cor11);
+        border: 1px solid var(--cor12);
+        border-radius: 5px;
+        text-align: center;
+        max-width: 60%;
+    }
+
+    .req-psw {
+        display: none;
+        margin: 1em 0 0 0;
+        width: 20rem;
+    }
+    
+    .req-psw span {
+        color: var(--cor02);
+    }
+    
+    .valid::before {
+        position: relative;
+        color: green;
+        content: "✔";
+    }
+    
+    .invalid::before {
+        position: relative;
+        color: red;
+        content: "✖";
+    }
+    
+    #pswOk { 
+        display: none;
+        margin: 1em 0 0 0;
+        font-weight: bold;
+        color: red;
+    }
+    
+    .reveal-psw {
+        margin: 1em 0 0 0;
+    }
+    
+    .reveal-psw span {
+        font-weight: lighter;
+    }
+
+    label {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=email] {
+        color: var(--cor01) !important;
+        background-color: var(--cor03) !important;
+    }
+
+    input[type=text] {
+        border: none;
+    }
+
+    input[type=text]:focus {
+        box-shadow: 0px 0px 0.2rem 0.3rem var(--cor02);
+    }
+
+    input[type=password] {
+        border: none;
+    }
+
+    input[type=password]:focus {
+        box-shadow: 0px 0px 0.2rem 0.3rem var(--cor02);
+    }
+
+    input[type=email] {
+        border: none;
+    }
+
+    input[type=email]:focus {
+        box-shadow: 0px 0px 0.2rem 0.3rem var(--cor02);
+    }
+
+    input[type=checkbox],
+    input[type=checkbox]:focus {
+        border: none;
+        box-shadow: none;
+    }
+
+    form input[type='submit'],
+    #insert-control-buttons>.btn,
+    #dashboard-container-buttons>.btn {
+        background-color: transparent;
+        color: var(--cor02);
+        border: 2px solid var(--cor02);
+        padding: 0.5em 1.2rem;
+        margin-bottom: 1rem;
+        font-size: 1.1rem;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.25s;
+        width: 12rem;
+    }
+
+    form input[type='submit']:hover,
+    #insert-control-buttons>.btn:hover,
+    #dashboard-container-buttons>.btn:hover {
+        background-color: var(--cor02);
+        color: var(--cor01);
+    }
+
+    #insert-control-buttons>.btn {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-top: 1rem;
+    }
+
+    nav button {
+        padding: 0 0 0 1rem;
+        background-color: transparent;
+        border: none;
+    }
+
+    #logo img {
+        height: 4rem;
+        margin-right: 78%;
+        margin-top: -0.5rem;
+    }
+
+    .navInvisible {
+        display: none;
+    }
+
+    .navVisible {
+        display: flex;
+        flex-direction: row;
+        padding: 1em 1em 0;
+        height: 5rem;
+        border-bottom: 1px solid var(--cor02)
+    }
+
+    .navVisible ul {
+        padding: 0.5rem 1rem 0;
+        margin-left: 82%;
+        display: flex;
+        list-style: none;
+    }
+
+    .navVisible ul li {
+        margin: 0rem 2.5rem 0 1rem;
+    }
+
+    .navVisible ul li a {
+        font-size: 1.2rem;
+        color: var(--cor01);
+        text-decoration: none;
+        transition: 0.25s;
+        font-weight: bold;
+    }
+
+    .navVisible ul li a:hover {
+        color: var(--cor02)
+    }
+
+    #btnNav {
+        background-color: transparent;
+        border: none;
+    }
+
+    #btnNav i {
+        color: var(--cor01);
+        font-size: 2rem;
+        transition: 0.25s;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #btnNav i:hover {
+        color: var(--cor02);
+    }
+
+    #btnRight {
+        background-color: transparent;
+        border: none;
+        float: right;
+    }
+
+    #btnRight i {
+        color: var(--cor01);
+        font-size: 2rem;
+        transition: 0.25s;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #btnRight i:hover {
+        color: var(--cor02);
+    }
+
+    #nav-dash ul li {
+        margin: -0.8rem 6rem;
+    }
+
+    #nav-dash i {
+        font-size: 1.5rem;
+        padding: 1rem 2rem 0;
+    }
+
+    #dashboard {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #dashboard h1 {
+        color: var(--cor01);
+        font-size: 2.5rem;
+    }
+
+    #dashboard-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #dashboard-container .list {
+        border-bottom: 2px solid var(--cor02);
+    }
+
+    #dashboard-container ul {
+        list-style: none;
+        margin-top: 1%;
+        margin-left: 0;
+    }
+
+    #dashboard-container .actions {
+        display: flex;
+        flex-direction: row;
+        width: 15rem;
+        margin-left: 0;
+    }
+
+    #dashboard-container .actions .btn {
+        background-color: transparent;
+        color: var(--cor02);
+        border: 2px solid var(--cor02);
+        padding: 0.5em 1.2rem;
+        margin-bottom: 1rem;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.25s;
+        width: 6rem;
+    }
+
+    #dashboard-container .actions .btn:hover {
+        background-color: var(--cor02);
+        color: var(--cor01);
+    }
+
+    #dashboard-container label {
+        font-size: 1.1rem;
+        font-weight: bold;
+        margin-left: 0;
+    }
+
+    #dashboard-container label a:link,
+    #dashboard-container label a:active,
+    #dashboard-container label a:visited {
+        color: var(--cor01);
+    }
+
+    #dashboard-container label a:hover {
+        color: var(--cor02);
+    }
+
+    #dashboard-container ul li label {
+        font-size: 1.1rem;
+        font-weight: bold;
+    }
+
+    #dashboard-container ul li span {
+        color: var(--cor02);
+    }
+
+    #dashboard-container-left {
+        margin-right: 90rem;
+    }
+
+    .dashboard-container-title-h1 {
+        border-left: 4px solid var(--cor02);
+        padding: 10px;
+    }
+
+    .dashboard-container-title-h3 {
+        font-size: 2rem;
+        font-weight: bold;
+        margin-top: 1%;
+        margin-right: 100%;
+        margin-left: 1%;
+    }
+
+    #dashboard-container-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .order-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .order-container #btn-icon {
+        background-color: transparent;
+        border: none;
+    }
+
+    .order-container i {
+        color: var(--cor01);
+        font-size: 1rem;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .order-container i:hover {
+        color: var(--cor02);
+    }
+
+    .order-container span {
+        font-size: 1.1rem;
+        font-weight: bold;
+        color: var(--cor02);
+    }
+
+    .order-container a:link,
+    .order-container a:active,
+    .order-container a:visited {
+        color: var(--cor01);
+    }
+
+    .order-container a:hover {
+        color: var(--cor02);
+    }
+
+    #form-control {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #form-control h1 {
+        color: var(--cor01);
+    }
+
+    #form-control h1 span {
+        color: var(--cor02);
+    }
+
+    #form-control p span {
+        color: var(--cor02);
+    }
+
+    #form-control p a:link,
+    #form-control p a:active,
+    #form-control p a:visited {
+        color: var(--cor01);
+    }
+
+    #form-control p a:hover {
+        color: var(--cor02);
+    }
+
+    #form-control input[type=text]::placeholder,
+    #form-control input[type=password]::placeholder,
+    #form-control input[type=email]::placeholder {
+        color: var(--cor16);
+    }
+
+    #form-control input[type=text],
+    #form-control input[type=password],
+    #form-control input[type=email] {
+        width: 22rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+
+    #form-control input[type=checkbox] {
+        width: 2rem;
+    }
+
+    #insert-control {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #insert-control-buttons {
+        display: flex;
+        flex-direction: row;
+        margin-top: 1rem;
+    }
+
+    .margin-control-left {
+        margin-left: 8rem;
+    }
+
+    .margin-control-right {
+        margin-right: 8rem;
+    }
+
+    .margin-control-top {
+        margin-top: 2rem;
+    }
+
+    #input-form-control {
+        padding: 2rem 5rem 0.5rem;
+    }
+
+    .form-check-input {
+        cursor: pointer;
+    }
+
+    .form-check-label {
+        cursor: pointer;
+    }
+
+    .msgCapsLock {
+        margin-top: 2%;
+        color: var(--cor02);
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1300px) {
+    * {
+        font-family: Arial, Helvetica, Verdana;
+        margin: 0 auto;
+        padding: 0 auto;
+        box-sizing: border-box;
+    }
+
+    main {
+        min-height: 65vh;
+    }    
+
+    .swal-overlay {
+        background-color: rgba(161, 40, 40, 0.45);
+    }
+
+    .messageOk {
+        font-size: 0.8rem;
+        padding: 1rem;
+        color: var(--cor07);
+        background-color: var(--cor08);
+        border: 1px solid var(--cor09);
+        border-radius: 5px;
+        text-align: center;
+        max-width: 30%;
+    }
+
+    .messageErr {
+        font-size: 0.8rem;
+        padding: 1rem;
+        color: var(--cor04);
+        background-color: var(--cor05);
+        border: 1px solid var(--cor06);
+        border-radius: 5px;
+        text-align: center;
+        max-width: 30%;
+    }
+
+    .messageLog {
+        font-size: 0.8rem;
+        padding: 1rem;
+        color: var(--cor13);
+        background-color: var(--cor14);
+        border: 1px solid var(--cor15);
+        border-radius: 5px;
+        text-align: center;
+        max-width: 60%;
+    }
+
+    .messageDef {
+        font-size: 0.8rem;
+        padding: 1rem;
+        color: var(--cor10);
+        background-color: var(--cor11);
+        border: 1px solid var(--cor12);
+        border-radius: 5px;
+        text-align: center;
+        max-width: 30%;
+    }
+
+    .req-psw {
+        display: none;
+        margin: 1em 0 0 0;
+        width: 15rem;
+    }
+    
+    .req-psw span {
+        color: var(--cor02);
+    }
+    
+    .valid::before {
+        position: relative;
+        color: green;
+        content: "✔";
+    }
+    
+    .invalid::before {
+        position: relative;
+        color: red;
+        content: "✖";
+    }
+    
+    #pswOk { 
+        display: none;
+        margin: 1em 0 0 0;
+        font-weight: bold;
+        color: red;
+    }
+    
+    .reveal-psw {
+        margin: 1em 0 0 0;
+    }
+    
+    .reveal-psw span {
+        font-weight: lighter;
+    }
+
+    label {
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=email] {
+        color: var(--cor01) !important;
+        background-color: var(--cor03) !important;
+    }
+
+
+    input[type=text] {
+        border: none;
+    }
+
+    input[type=text]:focus {
+        box-shadow: 0px 0px 0.2rem 0.3rem var(--cor02);
+    }
+
+    input[type=password] {
+        border: none;
+    }
+
+    input[type=password]:focus {
+        box-shadow: 0px 0px 0.2rem 0.3rem var(--cor02);
+    }
+
+    input[type=email] {
+        border: none;
+    }
+
+    input[type=email]:focus {
+        box-shadow: 0px 0px 0.2rem 0.3rem var(--cor02);
+    }
+
+    input[type=checkbox],
+    input[type=checkbox]:focus {
+        border: none;
+        box-shadow: none;
+    }
+
+    form input[type='submit'],
+    #insert-control-buttons>.btn,
+    #dashboard-container-buttons>.btn {
+        background-color: transparent;
+        color: var(--cor02);
+        border: 2px solid var(--cor02);
+        padding: 0.5em 1.2rem;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.25s;
+        width: 8rem;
+    }
+
+    form input[type='submit']:hover,
+    #insert-control-buttons>.btn:hover,
+    #dashboard-container-buttons>.btn:hover {
+        background-color: var(--cor02);
+        color: var(--cor01);
+    }
+
+    #insert-control-buttons>.btn {
+        margin-left: 4rem;
+        margin-right: 4rem;
+        margin-top: 1rem;
+    }
+
+    nav button {
+        padding: 0 0 0 1rem;
+        background-color: transparent;
+        border: none;
+    }
+
+    #logo img {
+        height: 3rem;
+        margin-right: 75%;
+    }
+
+    .navInvisible {
+        display: none;
+    }
+
+    .navVisible {
+        display: flex;
+        flex-direction: row;
+        padding: 1em 1em 0;
+        height: 5rem;
+        border-bottom: 1px solid var(--cor02)
+    }
+
+    .navVisible ul {
+        padding: 0.8rem 0.8rem 0;
+        margin-left: 79%;
+        display: flex;
+        list-style: none;
+    }
+
+    .navVisible ul li {
+        margin: 0rem 2rem 0 0.5rem;
+    }
+
+    .navVisible ul li a {
+        font-size: 1rem;
+        color: var(--cor01);
+        text-decoration: none;
+        transition: 0.25s;
+        font-weight: bold;
+    }
+
+    .navVisible ul li a:hover {
+        color: var(--cor02)
+    }
+
+    #btnNav {
+        background-color: transparent;
+        border: none;
+    }
+
+    #btnNav i {
+        color: var(--cor01);
+        font-size: 2rem;
+        transition: 0.25s;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #btnNav i:hover {
+        color: var(--cor02);
+    }
+
+    #btnRight {
+        background-color: transparent;
+        border: none;
+        float: right;
+    }
+
+    #btnRight i {
+        color: var(--cor01);
+        font-size: 2rem;
+        transition: 0.25s;
+        font-weight: bold;
+        cursor: pointer;
+    }
+
+    #btnRight i:hover {
+        color: var(--cor02);
+    }
+    
+    #nav-dash ul li {
+        margin: -0.8rem 3rem;
+    }
+
+    #nav-dash i {
+        font-size: 1.5rem;
+        padding: 0 1.8rem 0;
+    }
+
+    #dashboard {
+        padding-top: 1rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #dashboard h1 {
+        color: var(--cor01);
+        font-size: 2rem;
+    }
+
+    #dashboard-container {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    #dashboard-container .list {
+        border-bottom: 2px solid var(--cor02);
+    }
+
+    #dashboard-container ul {
+        list-style: none;
+        margin-top: 1%;
+        margin-left: 0;
+    }
+
+    #dashboard-container .actions {
+        display: flex;
+        flex-direction: row;
+        width: 15rem;
+        margin-left: 0;
+    }
+
+    #dashboard-container .actions .btn {
+        background-color: transparent;
+        color: var(--cor02);
+        border: 2px solid var(--cor02);
+        padding: 0.5em 1.2rem;
+        margin-bottom: 1rem;
+        font-size: 0.8rem;
+        font-weight: bold;
+        border-radius: 5px;
+        cursor: pointer;
+        text-decoration: none;
+        transition: 0.25s;
+        width: 6rem;
+    }
+
+    #dashboard-container .actions .btn:hover {
+        background-color: var(--cor02);
+        color: var(--cor01);
+    }
+
+    #dashboard-container label {
+        font-size: 0.8rem;
+        font-weight: bold;
+        margin-left: 0;
+    }
+
+    #dashboard-container label a:link,
+    #dashboard-container label a:active,
+    #dashboard-container label a:visited {
+        color: var(--cor01);
+    }
+
+    #dashboard-container label a:hover {
+        color: var(--cor02);
+    }
+
+    #dashboard-container ul li label {
+        font-size: 0.8rem;
+        font-weight: bold;
+    }
+
+    #dashboard-container ul li span {
+        color: var(--cor02);
+    }
+
+    #dashboard-container-left {
+        margin-right: 58rem;
+    }
+
+    .dashboard-container-title-h1 {
+        border-left: 4px solid var(--cor02);
+        padding: 10px;
+    }
+
+    .dashboard-container-title-h3 {
+        font-size: 1.4rem;
+        font-weight: bold;
+        margin-top: 1%;
+        margin-right: 100%;
+        margin-left: 1%;
+    }
+
+    #dashboard-container-buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .order-container {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .order-container #btn-icon {
+        background-color: transparent;
+        border: none;
+    }
+
+    .order-container i {
+        color: var(--cor01);
+        font-size: 0.8rem;
+        transition: 0.25s;
+        cursor: pointer;
+    }
+
+    .order-container i:hover {
+        color: var(--cor02);
+    }
+
+    .order-container span {
+        font-size: 1rem;
+        font-weight: bold;
+        color: var(--cor02);
+    }
+
+    .order-container a:link,
+    .order-container a:active,
+    .order-container a:visited {
+        color: var(--cor01);
+    }
+
+    .order-container a:hover {
+        color: var(--cor02);
+    }
+
+    #form-control {
+        padding-top: 0.5rem;
+        display: flex;
+        flex-direction: column;
+    }
+
+    #form-control h1 {
+        color: var(--cor01);
+    }
+
+    #form-control h1 span {
+        color: var(--cor02);
+    }
+
+    #form-control p span {
+        color: var(--cor02);
+    }
+
+    #form-control p a:link,
+    #form-control p a:active,
+    #form-control p a:visited {
+        color: var(--cor01);
+    }
+
+    #form-control p a:hover {
+        color: var(--cor02);
+    }
+
+    #form-control input[type=text]::placeholder,
+    #form-control input[type=password]::placeholder,
+    #form-control input[type=email]::placeholder {
+        color: var(--cor16);
+    }
+
+    #form-control input[type=text],
+    #form-control input[type=password],
+    #form-control input[type=email] {
+        width: 15rem;
+        font-size: 0.8rem;
+        text-align: center;
+    }
+
+    #form-control input[type=checkbox] {
+        width: 2rem;
+    }
+
+    #insert-control {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #insert-control-buttons {
+        display: flex;
+        flex-direction: row;
+        margin-top: 0.5rem;
+    }
+
+    .margin-control-left {
+        margin-left: 4rem;
+    }
+
+    .margin-control-right {
+        margin-right: 4rem;
+    }
+
+    .margin-control-top {
+        margin-top: 1rem;
+    }
+
+    #input-form-control {
+        padding: 1rem 5rem 0.25rem;
+    }
+
+    .form-check-input {
+        cursor: pointer;
+    }
+
+    .form-check-label {
+        cursor: pointer;
+    }
+
+    .msgCapsLock {
+        margin-top: 2%;
+        color: var(--cor02);
+        font-size: 0.7rem;
+    }
+}
