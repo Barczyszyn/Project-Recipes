@@ -22,10 +22,12 @@ window.addEventListener("load", function () {
 window.addEventListener("load", function () {
     let style = document.getElementById("style");
     let cookie = getCookie("style");
-    if (cookie == false) {
-        document.cookie = "style=/css/styles.css";
-    } else {
-        style.href = cookie;
+    if (style) {
+        if (cookie == false) {
+            document.cookie = "style=/css/styles.css";
+        } else {
+            style.href = cookie;
+        }
     }
 });
 
@@ -154,10 +156,32 @@ window.addEventListener("pageshow", function () {
     fetch(location.href).then(response => (response.status == 404) ? this.document.getElementById("btnRight").style.display = "none" : this.document.getElementById("btnRight").style.display = "block")
 });
 
+window.onbeforeunload = function (event) {
+    if (performance.navigation.type === 1) {
+        loading();
+    }
+};
+
+window.addEventListener("submit", function () {
+    loading();
+});
+
 $(function () {
     $("#time").mask("00:00")
 });
 
+function loading() {
+    const content = document.getElementById("content");
+    const loading = document.getElementById("loading");
+    if (content) {
+        content.style.display = "none";
+        loading.style.display = "block";
+        document.addEventListener("DOMContentLoaded", () => {
+            content.style.display = "block";
+            loading.style.display = "none";
+        });
+    }
+}
 
 function checkboxPassword() {
     let checkValue = document.getElementById("checkPassword")
@@ -200,11 +224,9 @@ function darkMode() {
     let style = getCookie("style");
     if (style == "/css/styles.css") {
         document.cookie = "style=/css/styles2.css; path=/";
-        document.cookie = "style=/css/styles2.css; path=/recipes";
         window.location.reload();
     } else if (style == "/css/styles2.css") {
         document.cookie = "style=/css/styles.css; path=/";
-        document.cookie = "style=/css/styles.css; path=/recipes";
         window.location.reload();
     }
 }
