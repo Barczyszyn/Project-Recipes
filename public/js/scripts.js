@@ -180,6 +180,10 @@ function loading() {
             content.style.display = "block";
             loading.style.display = "none";
         });
+        setTimeout(() => {
+            content.style.display = "block";
+            loading.style.display = "none";
+        }, 10000)
     }
 }
 
